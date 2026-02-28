@@ -1,0 +1,70 @@
+.nav {
+    position: relative;   /* IMPORTANT */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    background: #3b1926;
+}
+
+.nav::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("/images-background/backgrain-background.png");
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.20; /* 20% */
+    z-index: 0;
+}
+
+.nav > * {
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    margin-top: 0px;
+}
+
+.list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    list-style: none;
+    margin-right: 15%;
+}
+
+.list a {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.list a:hover {
+    color: #ff91b6;
+    transition: 0.3s;
+    filter: drop-shadow(0 0 6px #e7145a);
+}
+
+.item {
+    color: white;
+    cursor: pointer;
+}
+
+.item:hover {
+    opacity: 0.6;
+}
+
+.instagram {
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+}
+
+.instagram:hover {
+    color: #ff91b6;
+    transition: 0.3s;
+    filter: drop-shadow(0 0 6px #e7145a);
+}
