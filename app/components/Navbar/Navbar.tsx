@@ -6,11 +6,10 @@ export default function Navbar() {
     return (
         <nav className={styles.nav}>
             <Image
-                className={styles.logo}
                 src="/icon/little-Pony-Ink-Logo.png"
                 alt="Logo"
-                width={250}
-                height={250}
+                width={120}
+                height={60}
             />
 
             <ul className={styles.list}>
