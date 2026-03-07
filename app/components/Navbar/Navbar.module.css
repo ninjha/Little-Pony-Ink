@@ -93,6 +93,12 @@
     font-size: 40px;
 }
 
+.burger:hover {
+    color: #ff91b6;
+    transition: 0.3s;
+    filter: drop-shadow(0 0 6px #e7145a);
+}
+
 @media screen and (max-width:768px) { /* 900px ou moins */
 
         .burger {
@@ -151,8 +157,6 @@
             transition: 0.3s;
             filter: none;
         }
-
-        /* style après clique*/
 
         .list li {
             margin-left: 10px;
