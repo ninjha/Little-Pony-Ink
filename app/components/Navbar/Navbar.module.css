@@ -1,7 +1,8 @@
 .nav {
-    position: relative;   /* IMPORTANT */
+    position: absolute;   /* IMPORTANT */
     display: flex;
     justify-content: space-between;
+    width: 100%;
     align-items: center;
     padding-left: 5%;
     background: #3b1926;
@@ -26,8 +27,7 @@
 }
 
 
-
-.list {
+.list { /* <ul>*/
     display: flex;
     justify-content: flex-end;
     gap: 50px;
@@ -36,7 +36,7 @@
     flex-wrap: wrap;
 }
 
-.list a {
+.list a { /* <Link>*/
     color: white;
     text-decoration: none;
     transition: 0.2s;
@@ -62,8 +62,73 @@
     transition: 0.2s;
 }
 
+.icon {
+    display: block;
+}
+
+.text {
+    display: none;
+}
+
+/* Instagram*/
 .instagram:hover {
     color: #ff91b6;
     transition: 0.3s;
     filter: drop-shadow(0 0 6px #e7145a);
+}
+
+.icon {
+            display: block;
+        }
+
+.icon_text {
+    display: none;
+}
+
+
+/* Burger */
+.burger {
+    display : none;
+    width: 75px;
+    font-size: 40px;
+}
+
+@media screen and (max-width:768px) { /* 900px ou moins */
+
+        .burger {
+            display: block;
+        }
+
+        .list {
+            display: none;   /* caché par défaut */
+
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100vh;
+
+            background-color: rgba(112, 67, 93, 0.397);
+            backdrop-filter: blur(7px);
+
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            font-size: 50px;
+        }
+
+        /*Instagram*/
+        .icon {
+            display: none;
+        }
+
+        .icon_text {
+            display: block;
+        }
+
+        .open {
+            display: flex;
+        }
 }
