@@ -126,6 +126,8 @@
             transform: translateY(-10px);
             pointer-events: none;
 
+            transform: translateX(-100%);
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
         /*Instagram*/
@@ -137,12 +139,13 @@
             display: block;
         }
 
+        /* class apparaissant après avoir cliquer sur le menu burger, sorte d'extension de la classe .list*/
         .open {
             display: flex;
             opacity: 1;
             transform: translateY(0);
             pointer-events: auto;
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateX(0%);
         }
 
         /* Annulation des hover */

@@ -7,6 +7,13 @@ import { useState } from "react";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
+
+    /*
+    const tab = useState(false);
+    const open = tab[0];
+    const setOpen = tab[1];
+    */
+
     return (
         
         <nav className={styles.nav}>
@@ -16,7 +23,7 @@ export default function Navbar() {
                 width={120}
                 height={60}
             />
-            <ul className={`${styles.list} ${open ? styles.open : ""}`}>
+            <ul className={`${styles.list} ${open ? styles.open : ""}`}> {/* Si open == true, on ajoute la classe "open", sinon on n'ajoute rien */}
                 <li>
                     <Link href="/">Accueil</Link>
                 </li>
