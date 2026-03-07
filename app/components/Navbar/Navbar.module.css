@@ -100,7 +100,6 @@
         }
 
         .list {
-            display: none;   /* caché par défaut */
 
             flex-direction: column;
             position: absolute;
@@ -111,12 +110,16 @@
             height: 100vh;
 
             background-color: rgba(112, 67, 93, 0.397);
-            backdrop-filter: blur(7px);
+            backdrop-filter: blur(15px);
 
             justify-content: center;
-            align-items: center;
-            gap: 30px;
-            font-size: 50px;
+            gap: 5px;
+            font-size: 20px;
+
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+
         }
 
         /*Instagram*/
@@ -130,5 +133,36 @@
 
         .open {
             display: flex;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Annulation des hover */
+        .instagram:hover {
+            color: white;
+            transition: 0.3s;
+            filter: none;
+        }
+
+        .list a:hover {
+            color: white;
+            transition: 0.3s;
+            filter: none;
+        }
+
+        /* style après clique*/
+
+        .list li {
+            margin-left: 10px;
+            margin-right: 10px ;
+            padding:15px;
+            padding-left: 60px;
+            background-color: rgba(131, 102, 119, 0.87);
+        }
+
+        .list li:hover {
+            background-color: rgba(102, 80, 93, 0.87);
         }
 }
