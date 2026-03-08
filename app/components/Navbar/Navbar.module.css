@@ -36,55 +36,37 @@
     flex-wrap: wrap;
 }
 
-.list a { /* <Link>*/
+.list .nav_link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform-origin: left; /* Empêche le décallage des vers la gauche des liens dans le menu burger*/
+
     color: white;
     text-decoration: none;
-    transition: 0.2s;
+    transition: transform 0.2s, color 0.2s;
 }
 
-.list a:hover {
+.list .nav_link:hover {
     color: #ff91b6;
-    transition: 0.3s;
     filter: drop-shadow(0 0 6px #e7145a);
+    transform: scale(1.05);
 }
 
-.item {
-    color: white;
-    cursor: pointer;
+
+.insta_icon {
+    display: flex;        /* flex pour aligner icône + texte éventuel */
+    align-items: center;
+    gap: 30px;
 }
 
-.item:hover {
-    opacity: 0.6;
-}
-
-.instagram {
-    color: rgb(255, 255, 255);
-    transition: 0.2s;
+.insta_icon_text {
+    display: none;        /* texte caché par défaut (grand écran) */
 }
 
 .icon {
-    display: block;
-}
-
-.text {
     display: none;
 }
-
-/* Instagram*/
-.instagram:hover {
-    color: #ff91b6;
-    transition: 0.3s;
-    filter: drop-shadow(0 0 6px #e7145a);
-}
-
-.icon {
-            display: block;
-        }
-
-.icon_text {
-    display: none;
-}
-
 
 /* Burger */
 .burger {
@@ -110,66 +92,62 @@
             flex-direction: column;
             position: absolute;
             top: 0;
-            left: 0;
+            left: 30%;
 
             width: 100%;
             height: 100vh;
 
-            background-color: rgba(112, 67, 93, 0.397);
+            background-color: #70435d65;
             backdrop-filter: blur(15px);
 
             justify-content: center;
-            gap: 5px;
+            gap: 2px;
             font-size: 20px;
 
             opacity: 0;
-            transform: translateY(-10px);
+            transform: translateX(200%) translateY(-10px);
             pointer-events: none;
 
-            transform: translateX(-100%);
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
-        /*Instagram*/
-        .icon {
-            display: none;
+        .insta_icon_text {
+            display: block;   /* texte visible en burger */
         }
 
-        .icon_text {
-            display: block;
+
+        .icon {
+            display: block; /* texte visible en burger */
         }
 
         /* class apparaissant après avoir cliquer sur le menu burger, sorte d'extension de la classe .list*/
         .open {
             display: flex;
             opacity: 1;
-            transform: translateY(0);
             pointer-events: auto;
-            transform: translateX(0%);
-        }
-
-        /* Annulation des hover */
-        .instagram:hover {
-            color: white;
-            transition: 0.3s;
-            filter: none;
-        }
-
-        .list a:hover {
-            color: white;
-            transition: 0.3s;
-            filter: none;
+            transform: translate(0, 0);
         }
 
         .list li {
             margin-left: 10px;
             margin-right: 10px ;
-            padding:15px;
-            padding-left: 60px;
             background-color: rgba(131, 102, 119, 0.87);
         }
 
+        .list li .nav_link {
+            padding:15px;
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .list li .nav_link:hover {
+            color: white;
+            filter: drop-shadow(0 0 6px #b94a6f);
+        }
+
         .list li:hover {
-            background-color: rgba(102, 80, 93, 0.87);
+            background-color: rgba(160, 122, 144, 0.87);
         }
 }
