@@ -86,6 +86,7 @@ export default function Navbar() {
                 >
                     ☰
             </button>
+            {/* Ajouter le bouton close.svg puis créer une "condition" css pour l'afficher uniquement lorsque le men burger est ouvert */}
         </nav>
         );
 }
