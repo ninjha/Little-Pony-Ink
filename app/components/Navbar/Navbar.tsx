@@ -1,16 +1,19 @@
 "use client";
 
+import styles from "./Navbar.module.css";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
 import HomeIcon from "../Svg/HomeIcon";
 import GalleryIcon from "../Svg/GalleryIcon";
 import FlashIcon  from "../Svg/FlashIcon";
 import ProjectIcon from "../Svg/ProjectIcon";
 import FaqIcon from "../Svg/FaqIcon";
 import InstagramIcon from "../Svg/InstagramIcon";
+import CloseIcon from "../Svg/Close";
+import BurgerIcon from "../Svg/BurgerIcon";
 
-import styles from "./Navbar.module.css";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
 
 
 
@@ -84,9 +87,8 @@ export default function Navbar() {
                 className={styles.burger}
                 onClick={() => setOpen(!open)}
                 >
-                    ☰
+                    {open ? (<CloseIcon height={48} width={48} color="currentColor" />) : (<BurgerIcon height={48} width={48} color="currentColor" />)}
             </button>
-            {/* Ajouter le bouton close.svg puis créer une "condition" css pour l'afficher uniquement lorsque le men burger est ouvert */}
         </nav>
         );
 }
