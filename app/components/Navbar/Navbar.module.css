@@ -55,26 +55,30 @@
 
 
 .insta_icon {
-    display: flex; /* flex pour aligner icône + texte éventuel */
+    display: flex;        /* flex pour aligner icône + texte éventuel */
     align-items: center;
     gap: 30px;
 }
 
 .insta_icon_text {
-    display: none; /* texte caché par défaut (grand écran) */
+    display: none;        /* texte caché par défaut (grand écran) */
 }
 
 .icon {
     display: none;
 }
 
+/* Burger */
+.burger {
+    display : none;
+    padding-right: 25px;
+}
+
 
 @media screen and (max-width:768px) { /* 900px ou moins */
 
-    /* Burger */
     .burger {
-        display : block;
-        width: 75px;
+        display: block;
     }
 
     .burger:hover {
